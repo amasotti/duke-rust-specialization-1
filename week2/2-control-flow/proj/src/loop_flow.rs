@@ -72,3 +72,17 @@ pub fn named_loop() {
         }
     }
 }
+
+pub fn standard_rust_loop() {
+    let mut counter = 0;
+    let start_ms = std::time::Instant::now();
+    loop {
+        println!("Counter: {}", counter);
+        counter += 1;
+        if counter == 500 {
+            break;
+        }
+    }
+    let end_ms = std::time::Instant::now();
+    println!("Time taken: {:?}", end_ms.duration_since(start_ms));
+}

@@ -1,9 +1,13 @@
 mod if_flow;
 mod loop_flow;
+mod loop_play;
+mod option_play;
 
 fn main() {
     //if_demonstration();
-    loop_demonstration();
+    //loop_demonstration();
+    //loop_play::benchmark_named_loop();
+    option_play::conditional_nested_check();
 }
 
 fn if_demonstration() {
@@ -14,6 +18,8 @@ fn if_demonstration() {
 }
 
 fn loop_demonstration() {
+    loop_flow::standard_rust_loop();
+    print_sep(50);
     loop_flow::loop_while();
     print_sep(50);
     loop_flow::loop_for();
@@ -32,7 +38,6 @@ fn loop_demonstration() {
     print_sep(50);
     loop_flow::named_loop();
 }
-
 
 fn print_sep(len: i32) {
     print!("#");
