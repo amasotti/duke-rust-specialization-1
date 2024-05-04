@@ -29,3 +29,17 @@ lint:
 
 ## Part 3: Variable assignment and Immutability
 
+In Rust, variables are immutable by default. 
+This means that once a value is assigned to a variable, it cannot be changed.
+
+If you want to make a variable mutable, you need to use the `mut` keyword.
+
+```rust
+let x = 5; // immutable
+x = 6; // this is **NOT** allowed
+
+let mut y = 5; // mutable
+y = 6; // this is allowed
+```
+
+
