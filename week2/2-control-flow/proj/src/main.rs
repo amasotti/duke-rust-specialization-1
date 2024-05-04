@@ -1,15 +1,28 @@
+mod hashmapu;
 mod if_flow;
 mod loop_flow;
 mod loop_play;
-mod option_play;
 mod match_play;
+mod option_play;
 
 fn main() {
+    // Play with control flow (if-expression)
     //if_demonstration();
+
+    // Play with control flow (loop-expression)
     //loop_demonstration();
+
+    // Benchmark 20 runs of named loop
     //loop_play::benchmark_named_loop();
+
+    // Start using the Option enum
     //option_play::conditional_nested_check();
-    match_play::showcase_match();
+
+    // Start using the Match expression
+    //match_play::showcase_match();
+
+    // Start using the HashMap
+    hashmapu::test_hashmap();
 }
 
 fn if_demonstration() {

@@ -8,3 +8,8 @@ Part of the Coursera specialization [Rust Programming Specialization](https://ww
 
 - [The Book](https://doc.rust-lang.org/book/)
 - [Microsoft Learn Rust](https://learn.microsoft.com/en-us/training/modules/rust-introduction/)
+- [Microsoft Rust First Steps](https://learn.microsoft.com/en-us/training/paths/rust-first-steps/)
+
+## Specific topics
+
+- [Loops and Hashmaps](https://learn.microsoft.com/en-us/training/modules/rust-loop-expressions/)

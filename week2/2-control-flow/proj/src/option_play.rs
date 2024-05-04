@@ -9,9 +9,7 @@ pub fn conditional_check() {
     }
 }
 
-
 pub fn conditional_nested_check() {
-    
     let maybe_number = Some(Some(32));
 
     if let Some(n) = maybe_number {
