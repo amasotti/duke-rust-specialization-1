@@ -16,6 +16,10 @@ pub fn demo_error_handling(file_path: &str) {
                     println!("FAILURE: \nFile not found, did you spell it correctly?\n");
                     None
                 }
+                std::io::ErrorKind::PermissionDenied => {
+                    println!("FAILURE: \nPermission denied, do you have the right permissions?\n");
+                    None
+                }
                 _ => { 
                     println!("Some other error occurred: {:?}", error);
                     None 
