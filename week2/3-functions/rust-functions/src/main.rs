@@ -1,12 +1,15 @@
 mod str_manipulation;
 mod borrowing_demo;
 mod test_panic;
+mod error_handling;
 
 fn main() {
    str_manipulation::demo_str_manipulation();
     demo_sum_of_numbers();
     borrowing_demo::demo_borrwing();
     test_panic::demo_panic();
+    error_handling::demo_error_handling("non_existent_file.txt");
+    error_handling::demo_error_handling("Cargo.toml")
 }
 
 fn demo_sum_of_numbers() {

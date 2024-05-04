@@ -13,15 +13,15 @@ Now take this simple Rust code:
 
 ~~~rust
 fn main() {
-    let s = String::from("A wonderful test string");
-    own_string(s);
-    
-    println!("The string is no longer available here: {}", s);
+	let s = String::from("A wonderful test string");
+	own_string(s);
+	
+	println!("The string is no longer available here: {}", s);
 }
 
 
 fn own_string(s: String) {
-    println!("I own this string: {}", s);
+	println!("I own this string: {}", s);
 }
 ~~~
 
@@ -77,14 +77,14 @@ The solution is to pass a reference
 
 ~~~rust
 fn main() {
-    let s = String::from("A wonderful test string");
-    own_string(&s);
-    
-    println!("The string is still available here: {}", s);
+	let s = String::from("A wonderful test string");
+	own_string(&s);
+	
+	println!("The string is still available here: {}", s);
 }
 
 fn borrow_string(s: &String) {
-    println!("I borrowed this string: {}", s);
+	println!("I borrowed this string: {}", s);
 }
 ~~~
 
@@ -95,35 +95,35 @@ Have a look at this code:
 
 ~~~rust
 fn main() {
-    let mut v = vec![1, 2, 3, 4];
+	let mut v = vec![1, 2, 3, 4];
 
-    own_vec(v); // Ownership is moved to own_vec; `v` can no longer be used in `main` after this point.
+	own_vec(v); // Ownership is moved to own_vec; `v` can no longer be used in `main` after this point.
 
-    // To continue using `v`, we need to reinitialize it as it was moved in the `own_vec` function.
-    let mut v = vec![1, 2, 3, 4];
+	// To continue using `v`, we need to reinitialize it as it was moved in the `own_vec` function.
+	let mut v = vec![1, 2, 3, 4];
 
-    borrow_vec_mutable(&mut v); // `v` is borrowed mutably, modified, then the borrow ends.
-    println!("After mutable borrow: {:?}", v);  // `v` is accessible again, showing all changes.
+	borrow_vec_mutable(&mut v); // `v` is borrowed mutably, modified, then the borrow ends.
+	println!("After mutable borrow: {:?}", v);  // `v` is accessible again, showing all changes.
 
-    borrow_vec_immutable(&v); // `v` is borrowed immutably, it's read, but not modified.
-    println!("After immutable borrow: {:?}", v);  // `v` is accessible again, unchanged.
+	borrow_vec_immutable(&v); // `v` is borrowed immutably, it's read, but not modified.
+	println!("After immutable borrow: {:?}", v);  // `v` is accessible again, unchanged.
 }
 
 fn own_vec(mut v: Vec<i32>) {
-    v.push(5);
-    println!("own_vec owns and modifies the vector: {:?}", v);
-    // `v` goes out of scope here, and its memory is freed.
+	v.push(5);
+	println!("own_vec owns and modifies the vector: {:?}", v);
+	// `v` goes out of scope here, and its memory is freed.
 }
 
 fn borrow_vec_mutable(v: &mut Vec<i32>) {
-    v.push(6);
-    println!("borrow_vec_mutable borrows and modifies the vector: {:?}", v);
-    // Mutable borrow ends here.
+	v.push(6);
+	println!("borrow_vec_mutable borrows and modifies the vector: {:?}", v);
+	// Mutable borrow ends here.
 }
 
 fn borrow_vec_immutable(v: &Vec<i32>) {
-    println!("borrow_vec_immutable borrows and accesses the vector: {:?}", v);
-    // Immutable borrow ends here.
+	println!("borrow_vec_immutable borrows and accesses the vector: {:?}", v);
+	// Immutable borrow ends here.
 }
 ~~~
 
@@ -133,26 +133,26 @@ fn borrow_vec_immutable(v: &Vec<i32>) {
 
    - **Syntax:** `own_vec(v);`
    - **Behavior:** When `v` is passed to `own_vec`, ownership of v is transferred to the function. 
-     After the move, v is no longer accessible in the calling function (main in this case) because v 
-     has been moved and is now owned by own_vec.
+	 After the move, v is no longer accessible in the calling function (main in this case) because v 
+	 has been moved and is now owned by own_vec.
    - **Use Case:** Use moving when the receiving function needs to take ownership of the value, 
-     often because it needs to outlive the scope of the calling function or be mutated freely 
-     without affecting the original.
+	 often because it needs to outlive the scope of the calling function or be mutated freely 
+	 without affecting the original.
 
 2. **Mutable Borrowing**
 
    - **Syntax:** `borrow_vec_mutable(&mut v);`
    - **Behavior:** Passing `&mut v` allows borrow_vec_mutable to modify v. 
-     During the period v is borrowed mutably, no other parts of the code (including the caller) 
-     can access or borrow v, either mutably or immutably.
+	 During the period v is borrowed mutably, no other parts of the code (including the caller) 
+	 can access or borrow v, either mutably or immutably.
    - **Use Case:** Mutable borrowing is useful when a function needs to modify the borrowed data. 
-     It ensures that only one mutable reference exists at a time, preventing data races.
+	 It ensures that only one mutable reference exists at a time, preventing data races.
 
 3. **Immutable Borrowing**
 
    - **Syntax:** `borrow_vec_immutable(&v)`;
    - **Behavior:** Passing &v provides borrow_vec_immutable read-only access to v. 
-     Multiple immutable borrows can coexist, but they cannot coexist with a mutable borrow.
+	 Multiple immutable borrows can coexist, but they cannot coexist with a mutable borrow.
    - **Use Case:** Immutable borrowing is used when the data only needs to be read. 
-     It allows multiple parts of your program to safely read the data without risk of it 
-     being changed elsewhere.
+	 It allows multiple parts of your program to safely read the data without risk of it 
+	 being changed elsewhere.

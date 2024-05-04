@@ -16,3 +16,10 @@ fn loop_over_array(v: &[i32]) {
         println!("Element at index {}: {}", i, v[i]);
     }
 }
+
+/*
+Panic in Rust is a drastic way to handle errors.
+It's used when the program encounters an error that it cannot recover from.
+
+For other errors, Rust uses the Result type to handle errors.
+*/
