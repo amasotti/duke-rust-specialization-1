@@ -2,12 +2,14 @@ mod if_flow;
 mod loop_flow;
 mod loop_play;
 mod option_play;
+mod match_play;
 
 fn main() {
     //if_demonstration();
     //loop_demonstration();
     //loop_play::benchmark_named_loop();
-    option_play::conditional_nested_check();
+    //option_play::conditional_nested_check();
+    match_play::showcase_match();
 }
 
 fn if_demonstration() {
