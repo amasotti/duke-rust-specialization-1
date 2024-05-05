@@ -32,7 +32,7 @@ run project:
 
 lint project: install-fmt install-clippy
     @echo "Linting {{project}}"
-    cd $(just set-proj {{project}}) && cargo clippy && cargo fmt --all
+    cd $(just set-proj {{project}}) && cargo fmt --all && cargo clippy
 
 clean project:
     @echo "Cleaning {{project}}"
