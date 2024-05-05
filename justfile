@@ -4,6 +4,7 @@ alias l := lint
 alias b := build
 alias t := test
 alias r := run
+alias c := clean
 
 # Simplified project path determination using a function-like approach
 set-proj lesson:
@@ -11,11 +12,9 @@ set-proj lesson:
     @case "{{lesson}}" in \
         *basics*) echo "./week2/1-basics/proj";; \
         *control-flow*) echo "./week2/2-control-flow/proj";; \
-        *functions*) echo "./week2/3-functions/rust-functions";; \
+        *functions*) echo "./week2/3-functions/proj";; \
         *) echo "Error: Project '{{lesson}}' not found" >&2; exit 1;; \
     esac
-
-
 
 build project:
     @echo "Building {{project}}"
@@ -32,6 +31,10 @@ run project:
 lint project: install-fmt install-clippy
     @echo "Linting {{project}}"
     cd $(just set-proj {{project}}) && cargo clippy && cargo fmt --all
+
+clean project:
+    @echo "Cleaning {{project}}"
+    @cd $(just set-proj {{project}}) && cargo clean
 
 install-fmt:
     rustup component add rustfmt 2>/dev/null
