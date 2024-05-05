@@ -48,6 +48,10 @@ Some aliases are defined (just lazyness):
   - [Control Flow](./week2/2-control-flow/proj): If, loops, match
   - [Functions](./week2/3-functions/proj): Functions, methods, error handling, panic
 
+- [Week3](./week3):
+  - [Structs](./week3/1-structured-data/proj): Structs
+    - [Struct Lab](./week3/2-struct-lab/proj): Structs lab
+
 ## Resources
 
 - [The Book](https://doc.rust-lang.org/book/)
