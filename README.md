@@ -21,16 +21,16 @@ just run basics # or control-flow or functions
 # identical to `cd week2/1-basics/proj && cargo run`
 
 # To test them
-just test basics # or control-flow or functions
+just test basics
 
 # To build
-just build basics # or control-flow or functions
+just build basics
 
 # To lint
-just lint basics # or control-flow or functions
+just lint basics 
 
 # To clean
-just clean basics # or control-flow or functions
+just clean basics
 ```
 
 Some aliases are defined (just lazyness):
@@ -51,6 +51,7 @@ Some aliases are defined (just lazyness):
 - [Week3](./week3):
   - [Structs](./week3/1-structured-data/proj): Structs
     - [Struct Lab](./week3/2-struct-lab/proj): Structs lab
+    - [Associated Functions](./week3/3-methods-lab/proj): Associated functions
 
 ## Resources
 
