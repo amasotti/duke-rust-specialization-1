@@ -15,6 +15,7 @@ set-proj lesson:
         *functions*) echo "./week2/3-functions/proj";; \
         *structs*) echo "./week3/1-structured-data/proj";; \
         *struct-lab*) echo "./week3/2-struct-lab/proj";; \
+        *associated-fn*) echo "./week3/3-methods-lab/proj";; \
         *) echo "Error: Project '{{lesson}}' not found" >&2; exit 1;; \
     esac
 
