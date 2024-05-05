@@ -28,7 +28,7 @@ fn own_string(s: String) {
 This code will not compile. The error message is:
 
 ~~~sh 
-   Compiling rust-functions v0.1.0 (/home/toni/half-personal/rust/rust_spec_coursera/rust-specialization-course1-foundamentals/week2/3-functions/rust-functions)
+   Compiling proj v0.1.0 (/home/toni/half-personal/rust/rust_spec_coursera/rust-specialization-course1-foundamentals/week2/3-functions/proj)
 error[E0382]: borrow of moved value: `s`
  --> src/borrowing_demo.rs:5:60
   |
@@ -54,7 +54,7 @@ help: consider cloning the value if the performance cost is acceptable
   |                 ++++++++
 
 For more information about this error, try `rustc --explain E0382`.
-error: could not compile `rust-functions` (bin "rust-functions") due to 1 previous error
+error: could not compile `proj` (bin "proj") due to 1 previous error
 ~~~
 
 The compiler in Rust is very friendly and is saying us exactly what's happening under the hood:
