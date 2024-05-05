@@ -1,5 +1,10 @@
 set shell := ["bash", "-c"]
 
+alias l := lint
+alias b := build
+alias t := test
+alias r := run
+
 set-proj lesson:
     @if echo "{{lesson}}" | grep -qi "basics"; then \
       echo "./week2/1-basics/proj"; \
