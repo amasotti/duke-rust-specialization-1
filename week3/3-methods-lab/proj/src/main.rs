@@ -21,6 +21,7 @@ fn main() {
 
     let mut toni = User::from_email("toni@rust-test.com");
     println!("User: {:?}", toni);
+    println!("Email: {:?}", toni.email());
 
     toni.update_uri("https://toni.com");
     println!("User: {:?}", toni);

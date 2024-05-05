@@ -36,10 +36,14 @@ impl User {
     pub fn deactivate(&mut self) {
         self.active = false;
     }
-    
+
     /// Update URI
     pub fn update_uri(&mut self, uri: &str) {
         self.uri = uri.to_string();
+    }
+
+    pub fn email(&self) -> &Email {
+        &self.email
     }
 }
 
