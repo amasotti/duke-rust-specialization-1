@@ -5,17 +5,16 @@ alias b := build
 alias t := test
 alias r := run
 
+# Simplified project path determination using a function-like approach
 set-proj lesson:
-    @if echo "{{lesson}}" | grep -qi "basics"; then \
-      echo "./week2/1-basics/proj"; \
-    elif echo "{{lesson}}" | grep -qi "control-flow"; then \
-      echo "./week2/2-control-flow/proj"; \
-    elif echo "{{lesson}}" | grep -qi "functions"; then \
-      echo "./week2/3-functions/rust-functions"; \
-    else \
-      echo "Error: Project '{{lesson}}' not found" >&2; \
-      exit 1; \
-    fi
+    # Use a case-like structure for pattern matching
+    @case "{{lesson}}" in \
+        *basics*) echo "./week2/1-basics/proj";; \
+        *control-flow*) echo "./week2/2-control-flow/proj";; \
+        *functions*) echo "./week2/3-functions/rust-functions";; \
+        *) echo "Error: Project '{{lesson}}' not found" >&2; exit 1;; \
+    esac
+
 
 
 build project:
