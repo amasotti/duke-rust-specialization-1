@@ -10,7 +10,6 @@ fn print_separator() {
     println!("-----------------");
 }
 
-
 fn variable_assignment() {
     let message = "Name: Antonio Masotti";
     let age = 30;

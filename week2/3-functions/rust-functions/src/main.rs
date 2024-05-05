@@ -1,10 +1,10 @@
-mod str_manipulation;
 mod borrowing_demo;
-mod test_panic;
 mod error_handling;
+mod str_manipulation;
+mod test_panic;
 
 fn main() {
-   str_manipulation::demo_str_manipulation();
+    str_manipulation::demo_str_manipulation();
     demo_sum_of_numbers();
     borrowing_demo::demo_borrwing();
     test_panic::demo_panic();

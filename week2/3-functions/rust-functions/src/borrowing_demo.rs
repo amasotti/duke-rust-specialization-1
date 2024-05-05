@@ -1,15 +1,14 @@
 pub fn demo_borrwing() {
     let s = String::from("A wonderful test string");
     let mut v = vec![1, 2, 3, 4];
-    
+
     //own_string(&s);
     borrow_string(&s);
     println!("The string is available here again: {}", s);
-    
+
     //own_vec(v);
     borrow_vec(&mut v);
     println!("The vector is available here again: {:?}", v);
-    
 }
 
 /// This will move the ownership of the string to the function and then drop it
