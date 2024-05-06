@@ -53,6 +53,7 @@ Some aliases are defined (just lazyness):
     - [Struct Lab](./week3/2-struct-lab/proj): Structs lab
     - [Associated Functions](./week3/3-methods-lab/proj): Associated functions
   - [Strings](./week3/4-strings/proj): Strings
+    - [Strings Lab](./week3/5-strings-lab/proj): Strings lab
 
 ## Resources
 
