@@ -18,6 +18,8 @@ set-proj lesson:
         *associated-fn*) echo "./week3/3-methods-lab/proj";; \
         strings) echo "./week3/4-strings/proj";; \
         *lab-strings*) echo "./week3/5-strings-lab/proj";; \
+        vectors) echo "./week3/6-intro-to-vectors/proj";; \
+        lab-vec) echo "./week3/7-lab-vectors/proj";; \
         *) echo "Error: Project '{{lesson}}' not found" >&2; exit 1;; \
     esac
 

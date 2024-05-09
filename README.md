@@ -54,6 +54,8 @@ Some aliases are defined (just lazyness):
     - [Associated Functions](./week3/3-methods-lab/proj): Associated functions
   - [Strings](./week3/4-strings/proj): Strings
     - [Strings Lab](./week3/5-strings-lab/proj): Strings lab
+  - [Vectors](week3/6-intro-to-vectors/proj): Vectors
+    - [Vectors Lab](week3/7-lab-vectors/proj): Vectors lab
 
 ## Resources
 
