@@ -56,6 +56,8 @@ Some aliases are defined (just lazyness):
     - [Strings Lab](./week3/5-strings-lab/proj): Strings lab
   - [Vectors](week3/6-intro-to-vectors/proj): Vectors
     - [Vectors Lab](week3/7-lab-vectors/proj): Vectors lab
+  - [Enums](week3/8-enums/proj): Enums
+    - [Enums Lab](week3/9-lab-enums/proj): Enums lab
 
 ## Resources
 

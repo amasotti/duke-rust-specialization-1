@@ -20,6 +20,8 @@ set-proj lesson:
         *lab-strings*) echo "./week3/5-strings-lab/proj";; \
         vectors) echo "./week3/6-intro-to-vectors/proj";; \
         lab-vec) echo "./week3/7-lab-vectors/proj";; \
+        enums) echo "./week3/8-enums/proj";; \
+        lab-enums) echo "./week3/9-lab-enums/proj";; \
         *) echo "Error: Project '{{lesson}}' not found" >&2; exit 1;; \
     esac
 
