@@ -40,7 +40,7 @@ fn generate_random_vec(size:usize) -> Vec<i32> {
     random_vec
 }
 
-fn main() {
+fn lab_1_play_with_vecs() {
     let vec = vec![1, 2, 3, 4, 5];
     get_item(3);
 
@@ -57,11 +57,56 @@ fn main() {
         Some(first_value) => println!("The first value in the vector is: {}", first_value),
         None => println!("The vector is empty!"),
     }
-    
+
     // Challenge 1
     challenge_1_empty_vector(vec![], 3);
-    
+
     // Challenge 2
     let v = generate_random_vec(7);
     sum_of_items(v);
+}
+
+/// Lab 2 on vectors 
+fn lab_2_add_elements_to_vec() {
+    let mut v = vec![1, 2, 3];
+    println!("{:?}", v); // Output: [1, 2, 3]
+    
+    v.push(4);
+    println!("{:?}", v); // Output: [1, 2, 3, 4]
+
+    // extend adds each element of the given slice to the vector
+    let more_numbers = vec![5, 6];
+    v.extend(more_numbers);
+    println!("{:?}", v);
+
+    // append adds the given vector to the vector, requires the vector to be mutable
+    let mut other_numbers = vec![7, 8];
+    v.append(&mut other_numbers);
+    println!("{:?}", v);
+
+    // insert items at a given index
+    v.insert(0, 150);
+    println!("{:?}", v); // Output: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    
+    // Challenge 1: Insert at the beginning
+    pad_vector(&mut v, 100);
+    println!("{:?}", v); // Output: [100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 100]
+    
+    // Challenge 2: Append a vector
+    let v2 = vec![200, 300];
+    merge_vectors(&mut v, v2);
+    println!("{:?}", v); // Output: [100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 100, 200, 300]
+}
+
+fn pad_vector(vector: &mut Vec<i32>, value: i32) {
+    vector.insert(0, value);
+    vector.insert(vector.len(), value);
+}
+
+fn merge_vectors(v1: &mut Vec<i32>, v2: Vec<i32>) {
+    v1.extend(v2);
+}
+
+fn main() {
+    lab_2_add_elements_to_vec();
 }
