@@ -59,6 +59,9 @@ Some aliases are defined (just lazyness):
   - [Enums](week3/8-enums/proj): Enums
     - [Enums Lab](week3/9-lab-enums/proj): Enums lab
 
+- [Week4](./week4):
+  - [Working with libraries](./week4/1-create-lib/proj): Crates, modules
+
 ## Resources
 
 - [The Book](https://doc.rust-lang.org/book/)
@@ -68,4 +71,5 @@ Some aliases are defined (just lazyness):
 ### Specific topics
 
 - [Loops and Hashmaps](https://learn.microsoft.com/en-us/training/modules/rust-loop-expressions/)
-
+- [Manage Modules & Crates (RustDocs)](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)
+- [Test Organization](https://doc.rust-lang.org/book/ch11-03-test-organization.html)

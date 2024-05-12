@@ -22,6 +22,7 @@ set-proj lesson:
         lab-vec) echo "./week3/7-lab-vectors/proj";; \
         enums) echo "./week3/8-enums/proj";; \
         lab-enums) echo "./week3/9-lab-enums/proj";; \
+        new-lib) echo "./week4/1-create-lib/proj";; \
         *) echo "Error: Project '{{lesson}}' not found" >&2; exit 1;; \
     esac
 
